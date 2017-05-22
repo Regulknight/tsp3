@@ -1,0 +1,14 @@
+body{
+    background: url("http://www.whitburnpevsner.com/wp-content/uploads/2014/10/Black-Gradient-for-windows.jpg");
+}
+h1, h2{
+    color: white;
+    align: "center"
+}
+label{
+    color: white;
+}
+
+.error{
+    color: red;
+}

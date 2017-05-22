@@ -1,0 +1,21 @@
+package servlets;
+
+import model.Power;
+
+import javax.jws.WebService;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+
+@WebService
+public class TestServlet extends HttpServlet {
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp)
+            throws ServletException, IOException {
+        Power power = (Power)req.getSession().getAttribute("power");
+        power.setResult(Math.pow(power.getBase(), power.getExp()));
+        resp.sendRedirect("result.jsp");
+    }
+}
